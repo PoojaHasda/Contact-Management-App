@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en"
+th:replace="~{base :: parent(~{::#content},~{::title},~{::script})}">
+<head>
+      <title>Contact us Page</title>
+    <style>
+        h1{
+            background-color: blueviolet;
+            color: blue;
+        }
+    </style>
+
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}">
+
+    <link href="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.css" rel="stylesheet" />
+
+</head>
+<body>
+    <div id="content">
+        <h1>Welcome to contact page</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur,
+          ratione!
+        </p>
+      </div>
+<!-- flowbite content -->
+    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.5.1/dist/flowbite.min.js"></script>
+
+</body>
+</html>
