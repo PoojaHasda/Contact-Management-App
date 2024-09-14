@@ -3,6 +3,7 @@ package com.contactmanager.contact.Entities;
 import java.util.*;
 
 import jakarta.persistence.*;
+import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -31,13 +32,16 @@ public class User {
         private String about;
         @Column(length = 1000)
         private String profileLink; 
+        @Column(name = "phone_number")
         private String phoneNumber;
 
+         @Getter(value = AccessLevel.NONE)
         // information
         private boolean enabled = false;
         private boolean emailVerified = false;
         private boolean phoneVerified = false; 
 
+        @Enumerated(value = EnumType.STRING)
         // signup --> SELF, GOOGLE, FACEBOOK, TWITTER, LINKEDIN, GITHUB
         private Provider provider = Provider.SELF;
         private String providerID;
@@ -48,6 +52,13 @@ public class User {
         private List<Contact> contacts = new ArrayList<>();
 
        
+        private String emailToken; 
+
+
+        public boolean isEnabled() {
+                // TODO Auto-generated method stub
+                throw new UnsupportedOperationException("Unimplemented method 'isEnabled'");
+        }
 
 
 }
