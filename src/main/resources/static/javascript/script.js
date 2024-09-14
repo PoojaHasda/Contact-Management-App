@@ -61,3 +61,34 @@ function changePageTheme(theme, oldTheme) {
 }
 
 //change page change theme
+
+
+// password validation
+
+function validatePasswords() {
+  let password = document.getElementById("password").value;
+  let confirmPassword = document.getElementById("confirm_password").value;
+  let validationMessage = document.getElementById("password-validation-message");
+
+  if (password.length > 0 || confirmPassword.length > 0) {
+    // Show the validation message only if at least one of the fields is not empty
+    validationMessage.style.display = "inline";
+    
+    if (password === confirmPassword) {
+      validationMessage.textContent = "Passwords match";
+      validationMessage.style.color = "green";
+    } else {
+      validationMessage.textContent = "Passwords do not match";
+      validationMessage.style.color = "red";
+    }
+  } else {
+    // Hide the validation message if both fields are empty
+    validationMessage.style.display = "none";
+  }
+}
+
+// Add event listeners to the password fields when the page loads
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById("password").addEventListener("input", validatePasswords);
+  document.getElementById("confirm_password").addEventListener("input", validatePasswords);
+});
