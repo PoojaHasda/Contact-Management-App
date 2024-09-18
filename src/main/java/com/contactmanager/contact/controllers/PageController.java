@@ -58,11 +58,13 @@ public class PageController {
         return new String("contact");
     }
 
+    // for login page
     @GetMapping("/login")
     public String getloginPage() {
         return new String("login");
     }
 
+    // for registration page
     @GetMapping("/register")
     public String getSignUpPage(Model model) {
         UserForm userform = new UserForm();

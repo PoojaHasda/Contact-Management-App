@@ -10,8 +10,10 @@ import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
 // import org.hibernate.validator.internal.util.logging.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.contactmanager.contact.Entities.User;
+import com.contactmanager.contact.helper.AppConstants;
 import com.contactmanager.contact.helper.ResourceNotFoundException;
 import com.contactmanager.contact.services.UserServices;
 import com.contactmanager.contact.repositories.UserRepo;
@@ -20,18 +22,35 @@ import com.contactmanager.contact.repositories.UserRepo;
 public class UserServiceImpl implements UserServices {
 
     @Autowired
+    private PasswordEncoder passwordEncoder;
+
+    @Autowired
     private UserRepo userRepo;
+
+    // @Autowired
+    // private EmailService emailService;
 
     private Logger logger = LoggerFactory.getLogger(this.getClass());
 
+    // @Autowired
+    // private  Helper helper;
+    
     @Override
     public User saveUser(User user) {
         String userId = UUID.randomUUID().toString();
         user.setUserID(userId);
     
-        // user.setPassword(passwordEncoder.encode(user.getPassword()));
+        user.setPassword(passwordEncoder.encode(user.getPassword()));
 
-        return userRepo.save(user);
+          user.setRoleList(List.of(AppConstants.ROLE_USER));
+
+        logger.info(user.getProvider().toString());
+        String emailToken = UUID.randomUUID().toString();
+        user.setEmailToken(emailToken);
+        User savedUser = userRepo.save(user);
+    //     String emailLink = helper.getLinkForEmailVerificatiton(emailToken);
+    //     emailService.sendEmail(savedUser.getEmail(), "Verify Account : Smart  Contact Manager", emailLink);
+        return savedUser;
     }
 
     @Override
