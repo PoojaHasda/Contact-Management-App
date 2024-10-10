@@ -30,9 +30,22 @@
 - **Frontend**: Thymeleaf, HTML, CSS, JavaScript
 - **Database**: MySQL
 - **Security**: Spring Security, OAuth2
-- **Email Service**: SMTP for OTP verification
 
+## Project Structure
 
+SmartContactManager/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/com/smartcontact/smartcontactmanager/    # Java source files
+│   │   ├── resources/
+│   │   │   ├── static/                             # Static files like CSS, JavaScript, images
+│   │   │   ├── templates/                          # Thymeleaf HTML files
+│   │   │   ├── application.properties              # Configuration properties
+│   ├── test/                                        # Test cases
+│
+├── pom.xml                                          # Maven configuration
+├── README.md                                        # Project documentation
 ## Setup Instructions
 
 ### Prerequisites
@@ -48,5 +61,5 @@
    ```bash
    git clone https://github.com/PoojaHasda/smart-contact-manager.git
 2. Set up MySQL:
-- Create a database named .
+- Create a database named contactmanagement.
 - Update the MySQL connection details in src/main/resources/application.properties.
