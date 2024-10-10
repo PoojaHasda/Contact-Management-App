@@ -33,19 +33,20 @@
 
 ## Project Structure
 
-SmartContactManager/
-│
-├── src/
-│   ├── main/
-│   │   ├── java/com/smartcontact/smartcontactmanager/    # Java source files
-│   │   ├── resources/
-│   │   │   ├── static/                             # Static files like CSS, JavaScript, images
-│   │   │   ├── templates/                          # Thymeleaf HTML files
-│   │   │   ├── application.properties              # Configuration properties
-│   ├── test/                                        # Test cases
-│
-├── pom.xml                                          # Maven configuration
-├── README.md                                        # Project documentation
+CONTACT MANAGEMENT APP/
+- src/
+  - main/
+    - java/com/contactmanager/contact/    # Java source files
+    - resources/
+      - static/                               # Static files like CSS, JavaScript, images
+      - templates/                            # Thymeleaf HTML files
+      - application.properties                # Configuration properties
+  - test/                                      # Test cases
+- pom.xml                                      # Maven configuration
+- README.md                                    # Project documentation
+
+
+
 ## Setup Instructions
 
 ### Prerequisites
