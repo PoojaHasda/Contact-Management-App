@@ -31,6 +31,7 @@ public class User implements UserDetails {
 
         @Column(unique = true, nullable = false)
         private String email;
+
         private String password;
 
         @Column(length = 1000)
@@ -42,7 +43,7 @@ public class User implements UserDetails {
 
         @Getter(value = AccessLevel.NONE)
         // information
-        private boolean enabled = true;
+        private boolean enabled = false;
         private boolean emailVerified = false;
         private boolean phoneVerified = false;
 
@@ -58,11 +59,7 @@ public class User implements UserDetails {
 
         private String emailToken;
 
-        @Override
-        public boolean isEnabled() {
-                // TODO Auto-generated method stub
-                return this.enabled;
-        }
+     
 
 
         @ElementCollection(fetch = FetchType.EAGER)
@@ -99,9 +96,14 @@ public class User implements UserDetails {
                 return true;
         }
 
-        // @Override
-        // public boolean isEnabled(){
-        // return this.enabled;
-        // }
-
+        @Override
+        public boolean isEnabled() {
+                // TODO Auto-generated method stub
+                return this.enabled;
+        }
+      
+        @Override
+        public String getPassword() {
+            return this.password;
+        }
 }
