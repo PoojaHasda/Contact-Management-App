@@ -93,26 +93,26 @@ public class UserServiceImpl implements UserServices {
 
     @Override
     public boolean isUserExist(String userId) {
-        // TODO Auto-generated method stub
+        
         User user2 = userRepo.findById(userId).orElse(null);
         return user2 != null ? true : false;    
     }
 
     @Override
     public boolean isUserExistByEmail(String email) {
-        // TODO Auto-generated method stub
+        
         User user = userRepo.findByEmail(email).orElse(null);
         return user != null ? true : false;   }
 
     @Override
     public List<User> getAllUsers() {
-        // TODO Auto-generated method stub
+        
         return userRepo.findAll();
         }
 
     @Override
     public User getUserByEmail(String email) {
-        // TODO Auto-generated method stub
+        
         return userRepo.findByEmail(email).orElse(null);    }
 
         // @Override
