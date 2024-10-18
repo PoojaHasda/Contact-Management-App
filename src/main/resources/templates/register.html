@@ -35,9 +35,12 @@
           <!-- this is sign -->
             <form class="space-y-6" data-th-action="@{'/do-register'}" 
             data-th-object="${userform}"
-            method="post"
+            method="post"  
+        
             >
+    <!-- method k body m jayega data -->
 
+    
             <!-- message here -->
              <div th:replace="~{message :: messagebox}"></div>
               <h5 class="text-xl font-medium text-gray-900 dark:text-white text-center ">
