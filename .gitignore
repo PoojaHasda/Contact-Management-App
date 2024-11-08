@@ -31,7 +31,6 @@ build/
 
 ### VS Code ###
 .vscode/
-
-
-C:\Users\ASUS\Desktop\projects\Contact Management App\src\main\resources\application-dev.properties
 node_modules
+
+src/main/resources/application-dev.properties
