@@ -19,12 +19,12 @@ import com.contactmanager.contact.Entities.Contact;
 import com.contactmanager.contact.Entities.User;
 import com.contactmanager.contact.forms.ContactForm;
 import com.contactmanager.contact.forms.ContactSearchForm;
-import com.contactmanager.contact.helper.AppConstants;
-import com.contactmanager.contact.helper.Helper;
-import com.contactmanager.contact.helper.Message;
-import com.contactmanager.contact.helper.MessageType;
-import com.contactmanager.contact.services.ContactService;
+import com.contactmanager.contact.helpers.AppConstants;
+import com.contactmanager.contact.helpers.Helper;
+import com.contactmanager.contact.helpers.Message;
+import com.contactmanager.contact.helpers.MessageType;
 import com.contactmanager.contact.services.ImageService;
+import com.contactmanager.contact.services.Impl.ContactServiceImpl;
 import com.contactmanager.contact.services.UserServices;
 
 import jakarta.servlet.http.HttpSession;
@@ -37,7 +37,7 @@ public class ContactController {
     private Logger logger = org.slf4j.LoggerFactory.getLogger(ContactController.class);
 
     @Autowired
-    private ContactService contactService;
+    private ContactServiceImpl contactService;
 
     @Autowired
     private ImageService imageService;

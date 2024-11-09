@@ -1,12 +1,9 @@
-package com.contactmanager.contact.helper;
-
+package com.contactmanager.contact.helpers;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.security.core.Authentication;
-
-// import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties.Authentication;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
-import org.springframework.security.oauth2.core.OAuth2AuthenticatedPrincipal;
 import org.springframework.security.oauth2.core.user.OAuth2User;
 import org.springframework.stereotype.Component;
 
@@ -18,7 +15,7 @@ public class Helper {
 
     public static String getEmailOfLoggedInUser(Authentication authentication) {
 
-        // agar email or password se login kiya hai to : email kaise nikalenge
+        // agar email is password se login kiya hai to : email kaise nikalenge
         if (authentication instanceof OAuth2AuthenticationToken) {
 
             var aOAuth2AuthenticationToken = (OAuth2AuthenticationToken) authentication;
@@ -54,5 +51,6 @@ public class Helper {
     public String getLinkForEmailVerificatiton(String emailToken) {
 
         return this.baseUrl + "/auth/verify-email?token=" + emailToken;
+
     }
 }

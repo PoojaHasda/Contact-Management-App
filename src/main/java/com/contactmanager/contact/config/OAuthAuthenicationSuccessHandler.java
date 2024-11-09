@@ -12,14 +12,11 @@ import org.springframework.security.oauth2.core.user.DefaultOAuth2User;
 import org.springframework.security.web.DefaultRedirectStrategy;
 import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.stereotype.Component;
-
-import com.contactmanager.contact.Entities.Provider;
-import com.contactmanager.contact.Entities.User;
-import com.contactmanager.contact.helper.AppConstants;
-import com.contactmanager.contact.repositories.UserRepo;
-
 import java.util.List;
-
+import com.contactmanager.contact.Entities.Providers;
+import com.contactmanager.contact.Entities.User;
+import com.contactmanager.contact.helpers.AppConstants;
+import com.contactmanager.contact.repositories.UserRepo;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -71,7 +68,7 @@ public class OAuthAuthenicationSuccessHandler implements AuthenticationSuccessHa
             user.setProfilePic(oauthUser.getAttribute("picture").toString());
             user.setName(oauthUser.getAttribute("name").toString());
             user.setProviderUserId(oauthUser.getName());
-            user.setProvider(Provider.GOOGLE);
+            user.setProvider(Providers.GOOGLE);
             user.setAbout("This account is created using google.");
 
         } else if (authorizedClientRegistrationId.equalsIgnoreCase("github")) {
@@ -88,7 +85,7 @@ public class OAuthAuthenicationSuccessHandler implements AuthenticationSuccessHa
             user.setProfilePic(picture);
             user.setName(name);
             user.setProviderUserId(providerUserId);
-            user.setProvider(Provider.GITHUB);
+            user.setProvider(Providers.GITHUB);
 
             user.setAbout("This account is created using github");
         }

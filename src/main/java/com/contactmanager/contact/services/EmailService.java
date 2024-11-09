@@ -1,4 +1,5 @@
 package com.contactmanager.contact.services;
+
 public interface EmailService {
 
     //

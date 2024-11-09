@@ -1,8 +1,7 @@
-package com.contactmanager.contact.helper;
+package com.contactmanager.contact.helpers;
 
-public class ResourceNotFoundException extends RuntimeException{
-   
-    // constructor
+public class ResourceNotFoundException extends RuntimeException {
+
     public ResourceNotFoundException(String message) {
         super(message);
     }

@@ -11,9 +11,9 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 import com.contactmanager.contact.Entities.User;
-import com.contactmanager.contact.helper.AppConstants;
-import com.contactmanager.contact.helper.Helper;
-import com.contactmanager.contact.helper.ResourceNotFoundException;
+import com.contactmanager.contact.helpers.AppConstants;
+import com.contactmanager.contact.helpers.Helper;
+import com.contactmanager.contact.helpers.ResourceNotFoundException;
 import com.contactmanager.contact.repositories.UserRepo;
 import com.contactmanager.contact.services.EmailService;
 import com.contactmanager.contact.services.UserServices;

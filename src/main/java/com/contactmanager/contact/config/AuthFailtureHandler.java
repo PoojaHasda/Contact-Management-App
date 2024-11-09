@@ -7,8 +7,8 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.authentication.AuthenticationFailureHandler;
 import org.springframework.stereotype.Component;
 
-import com.contactmanager.contact.helper.Message;
-import com.contactmanager.contact.helper.MessageType;
+import com.contactmanager.contact.helpers.Message;
+import com.contactmanager.contact.helpers.MessageType;
 
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;

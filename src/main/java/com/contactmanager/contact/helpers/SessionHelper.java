@@ -1,4 +1,4 @@
-package com.contactmanager.contact.helper;
+package com.contactmanager.contact.helpers;
 
 import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
@@ -17,6 +17,7 @@ public class SessionHelper {
             session.removeAttribute("message");
         } catch (Exception e) {
             System.out.println("Error in SessionHelper: " + e);
+            
             e.printStackTrace();
         }
 

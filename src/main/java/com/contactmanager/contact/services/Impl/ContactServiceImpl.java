@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 
 import com.contactmanager.contact.Entities.Contact;
 import com.contactmanager.contact.Entities.User;
-import com.contactmanager.contact.helper.ResourceNotFoundException;
+import com.contactmanager.contact.helpers.ResourceNotFoundException;
 import com.contactmanager.contact.repositories.ContactRepo;
 import com.contactmanager.contact.services.ContactService;
 

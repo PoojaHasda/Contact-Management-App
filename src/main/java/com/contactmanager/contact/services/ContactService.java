@@ -5,9 +5,7 @@ import java.util.List;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 
-import com.contactmanager.contact.Entities.Contact;
-import com.contactmanager.contact.Entities.User;
-
+import com.contactmanager.contact.Entities.*;
 
 public interface ContactService {
     // save contacts

@@ -1,4 +1,5 @@
 package com.contactmanager.contact.repositories;
+
 import java.util.*;
 
 import org.springframework.data.domain.Page;
@@ -8,8 +9,8 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
-import com.contactmanager.contact.Entities.*;
-
+import com.contactmanager.contact.Entities.Contact;
+import com.contactmanager.contact.Entities.User;
 
 @Repository
 public interface ContactRepo extends JpaRepository<Contact, String> {

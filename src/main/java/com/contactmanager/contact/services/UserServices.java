@@ -6,7 +6,7 @@ import java.util.Optional;
 import com.contactmanager.contact.Entities.User;
 
 public interface UserServices {
-    
+
     User saveUser(User user);
 
     Optional<User> getUserById(String id);
@@ -22,5 +22,7 @@ public interface UserServices {
     List<User> getAllUsers();
 
     User getUserByEmail(String email);
-}
 
+    // add more methods here related user service[logic]
+
+}

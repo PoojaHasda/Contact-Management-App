@@ -1,4 +1,5 @@
 package com.contactmanager.contact.controllers;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -8,9 +9,9 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.contactmanager.contact.Entities.User;
 import com.contactmanager.contact.forms.UserForm;
-import com.contactmanager.contact.helper.Message;
-import com.contactmanager.contact.helper.MessageType;
-import com.contactmanager.contact.services.*;
+import com.contactmanager.contact.helpers.Message;
+import com.contactmanager.contact.helpers.MessageType;
+import com.contactmanager.contact.services.UserServices;
 
 import jakarta.servlet.http.HttpSession;
 import jakarta.validation.Valid;
@@ -50,11 +51,11 @@ public class PageController {
 
     // services
 
-    @RequestMapping("/services")
-    public String servicesPage() {
-        System.out.println("services page loading");
-        return "services";
-    }
+    // @RequestMapping("/services")
+    // public String servicesPage() {
+    //     System.out.println("services page loading");
+    //     return "services";
+    // }
 
     // contact page
 
@@ -114,10 +115,11 @@ public class PageController {
         // "https://www.learncodewithdurgesh.com/_next/image?url=%2F_next%2Fstatic%2Fmedia%2Fdurgesh_sir.35c6cb78.webp&w=1920&q=75")
         // .build();
 
-        com.contactmanager.contact.Entities.User user = new User();
+        User user = new User();
         user.setName(userForm.getName());
         user.setEmail(userForm.getEmail());
         user.setPassword(userForm.getPassword());
+        user.setAbout(userForm.getAbout());
         user.setPhoneNumber(userForm.getPhoneNumber());
         user.setEnabled(false);
         user.setProfilePic(

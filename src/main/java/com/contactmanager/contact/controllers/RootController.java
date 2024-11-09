@@ -8,10 +8,8 @@ import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ModelAttribute;
 
 import com.contactmanager.contact.Entities.User;
-import com.contactmanager.contact.helper.Helper;
+import com.contactmanager.contact.helpers.Helper;
 import com.contactmanager.contact.services.UserServices;
-
-
 
 @ControllerAdvice
 public class RootController {

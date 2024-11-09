@@ -1,4 +1,4 @@
-package com.contactmanager.contact.helper;
+package com.contactmanager.contact.helpers;
 
 public enum MessageType {
 

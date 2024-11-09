@@ -3,14 +3,13 @@ package com.contactmanager.contact.config;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-
 import org.springframework.security.authentication.dao.DaoAuthenticationProvider;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.SecurityFilterChain;
-import com.contactmanager.contact.services.Impl.*;
+import com.contactmanager.contact.services.Impl.SecurityCustomUserDetailService;
 
 @Configuration
 public class SecurityConfig {
@@ -41,7 +40,7 @@ public class SecurityConfig {
     // }
 
     @Autowired
-    private com.contactmanager.contact.services.Impl.SecurityCustomUserDetailService userDetailService;
+    private SecurityCustomUserDetailService userDetailService;
 
     @Autowired
     private OAuthAuthenicationSuccessHandler handler;
@@ -75,7 +74,7 @@ public class SecurityConfig {
         });
 
         // form default login
-        // agar hame kuch bhi change karna hua to hama yaha ayenge: form login se 
+        // agar hame kuch bhi change karna hua to hama yaha ayenge: form login se
         // related
         httpSecurity.formLogin(formLogin -> {
 

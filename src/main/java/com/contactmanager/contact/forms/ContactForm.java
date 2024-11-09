@@ -2,6 +2,7 @@ package com.contactmanager.contact.forms;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import com.contactmanager.contact.validators.ValidFile;
 
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
@@ -45,7 +46,7 @@ public class ContactForm {
     // size
     // resolution
 
-    @com.contactmanager.contact.validators.ValidFile(message = "Invalid File")
+    @ValidFile(message = "Invalid File")
     private MultipartFile contactImage;
 
     private String picture;

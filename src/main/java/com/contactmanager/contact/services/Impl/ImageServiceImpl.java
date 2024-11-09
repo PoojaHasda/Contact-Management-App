@@ -9,7 +9,7 @@ import org.springframework.web.multipart.MultipartFile;
 import com.cloudinary.Cloudinary;
 import com.cloudinary.Transformation;
 import com.cloudinary.utils.ObjectUtils;
-import com.contactmanager.contact.helper.*;
+import com.contactmanager.contact.helpers.*;
 import com.contactmanager.contact.services.ImageService;
 
 @Service

@@ -7,8 +7,6 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.EnumType;
 import jakarta.persistence.Enumerated;
 import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
@@ -25,7 +23,7 @@ import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
-@Entity
+@Entity(name = "user")
 @Table(name = "users")
 @Getter
 @Setter
@@ -58,7 +56,7 @@ public class User implements UserDetails {
 
     @Enumerated(value = EnumType.STRING)
     // SELF, GOOGLE, FACEBOOK, TWITTER, LINKEDIN, GITHUB
-    private Provider provider = Provider.SELF;
+    private Providers provider = Providers.SELF;
     private String providerUserId;
 
     // add more fields if needed

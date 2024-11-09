@@ -42,6 +42,6 @@ public class Contact {
     private User user;
 
     @OneToMany(mappedBy = "contact", cascade = CascadeType.ALL, fetch = FetchType.EAGER, orphanRemoval = true)
-    private List<SocialLinks> links = new ArrayList<>();
+    private List<SocialLink> links = new ArrayList<>();
 
 }

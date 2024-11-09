@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.contactmanager.contact.Entities.*;
-import com.contactmanager.contact.helper.*;
-import com.contactmanager.contact.repositories.UserRepo;
-
+import com.contactmanager.contact.Entities.User;
+import com.contactmanager.contact.helpers.Message;
+import com.contactmanager.contact.helpers.MessageType;
+import com.contactmanager.contact.repositories.*;
 import jakarta.servlet.http.HttpSession;
 
 @Controller
