@@ -9,18 +9,20 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 
 import com.contactmanager.contact.repositories.*;
 import com.contactmanager.contact.Entities.*;
-import com.contactmanager.contact.config.*;
+
 import com.contactmanager.contact.helpers.*;
 
 import java.util.List;
 import java.util.UUID;
 
 @SpringBootApplication
-public class Application  implements CommandLineRunner {
+public class Application implements CommandLineRunner {
 
 	public static void main(String[] args) {
 		SpringApplication.run(Application.class, args);
 	}
+
+	
 
 	@Autowired
 	private UserRepo userRepo;
