@@ -1,11 +1,11 @@
 # Contact Management Application - ContactSphere
 
-**ContactSphere** is a web application that allows users to manage their contacts in an organized and efficient manner. It centralizes the storage and retrieval of contact information, enabling users to update, store, and manage their contacts securely. The application includes essential features such as login/registration with email OTP verification, cloud storage for contact photos, and OAuth integration.
+**ContactSphere** is a web application that allows users to manage their contacts in an organized and efficient manner. It centralizes the storage and retrieval of contact information, enabling users to update, store, and manage their contacts securely. The application includes essential features such as login/registration with email verification, cloud storage for contact photos, and OAuth integration.
 
 ## Features
 
 - **User Registration and Login**
-  - Users can register by verifying their email through OTP.
+  - Users can register by verifying their email.
   - OAuth integration for login via Google.
   
 - **Manage Contacts**
